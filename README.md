@@ -115,7 +115,6 @@ To run this project locally, ensure you have the following installed:
    Run `Market_Intelligence_Full_Analysis.ipynb` to connect to your local database, analyze the ~4.5 million enriched records, and generate the final business insights.
 
 ---
-
 ## 📌 Key Assumptions & Data Logic
 
 During the cleaning and enrichment phases, the following business logic was applied:
@@ -131,3 +130,10 @@ During the cleaning and enrichment phases, the following business logic was appl
 
 * **Fuel Categorization**  
   Clustered various raw fuel descriptions into distinct macro-categories (e.g., Gasoline, Diesel, Hybrid, Electric) for cleaner visualization.
+
+* **Manufacturer Region Logic**  
+  `manufacturer_region` was derived based on the **brand's country/region of origin** rather than the actual vehicle manufacturing country.
+
+* **Road Registration Date Standardization**  
+  The `moed_aliya_lakvish` field was provided in **month/year format** only.  
+  In order to convert it into a standard SQL `DATE` format, all vehicles were assigned the **first day of the reported month**.
