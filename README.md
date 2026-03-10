@@ -53,8 +53,6 @@ This approach ensures **both scalability and ease of evaluation**.
 ---
 
 # 📁 Repository Structure
-
-```text
 /
 ├── notebooks/
 │   ├── Vehicle_Data_Pipeline_&_Insights.ipynb
@@ -74,17 +72,16 @@ This approach ensures **both scalability and ease of evaluation**.
 │         Feature engineering and indexing
 │
 ├── charts/
-│   ├── chart_market_share.png
-│   ├── chart_fleet_age.png
-│   ├── chart_pollution_trend.png
-│   └── chart_fuel_evolution.png
+│   ├── Market Share Analysis.png
+│   ├── Fleet Age Distribution.png
+│   ├── Environmental Trend.png
+│   └── Fuel distribution by 5-year periods.png
 │
 ├── data/
 │   └── enrichment_validation.csv
 │         Validation statistics of enriched fields
 │
 └── README.md
-```
 
 ---
 
@@ -140,8 +137,6 @@ During the cleaning and enrichment phases, the following business logic was appl
 
   ---
  
-
----
 
 ## 📊 Dashboard Preview
 
