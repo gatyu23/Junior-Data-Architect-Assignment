@@ -93,15 +93,8 @@ To run this project locally, ensure you have the following installed:
 * **PostgreSQL**
 * Python packages: `pandas`, `requests`, `sqlalchemy`, `plotly`, `psycopg2`
 
-### Environment Variables
-For security reasons, database credentials are not hardcoded. Please set the following environment variables (or update the connection strings locally in the notebooks):
-* `DB_HOST`
-* `DB_PORT`
-* `DB_NAME`
-* `DB_USER`
-* `DB_PASS`
 
-```text
+
 
 ## ⚙️ How to Run
 1. **Cloud Demo (Fastest Way)**: Simply open and run all cells in `Vehicle_Data_Pipeline_&_Insights.ipynb`. It connects to the Neon cloud DB and displays the pipeline logic and dashboard immediately.
