@@ -1,38 +1,88 @@
 # Junior Data Architect Assignment
 
-This repository contains an End-to-End data engineering and analytics solution for the Surpass Junior Data Architect assignment. The project demonstrates the extraction, transformation, enrichment, and visualization of vehicle data from the Israeli Ministry of Transport (data.gov.il).
+This repository contains an **end-to-end data engineering and analytics solution** for the Surpass Junior Data Architect assignment.  
+The project demonstrates the **extraction, transformation, enrichment, and visualization** of vehicle data from the Israeli Ministry of Transport dataset available on **data.gov.il**.
 
-## 🚀 Project Overview
-The pipeline processes real-world data and generates a Market Intelligence Dashboard. The workflow consists of four main phases:
-1. **API Data Extraction**: Fetching data using pagination and saving it as raw CSV.
-2. **DWH Layer & Cleaning**: Loading raw data into PostgreSQL, optimizing data types, handling NULLs, and validating records.
-3. **Data Enrichment**: Engineering new features such as Vehicle Age Category, Fuel Classification, and Environmental Pollution Levels.
-4. **Market Intelligence Dashboard**: Generating visual business insights using Python (Plotly).
+---
 
-   
-### 💡 Architecture & Scalability
-To ensure both robustness and ease of review, I have implemented two identical versions of the data pipeline:
+# 🚀 Project Overview
 
-* **Full Local Environment (Production Scale)**: The core pipeline is configured to run on a local **PostgreSQL** database. This setup is designed to process the entire dataset of approximately 4.5 million records, demonstrating the architecture's ability to handle large-scale data without being restricted by the storage limitations of free cloud tiers.
-* **Cloud Demo Environment (Neon DB)**: Due to the storage constraints of the free Neon cloud database, I deployed a parallel, ready-to-run cloud version. This version extracts a representative sample of the data directly via the API and stores it in Neon. It is specifically designed to allow reviewers to easily execute the notebooks and evaluate the dashboard logic out-of-the-box, without needing to set up or configure a local database.
-## 📁 Repository Structure
+The pipeline processes real-world transportation data and generates a **Market Intelligence Dashboard**.
+
+The workflow consists of four main phases:
+
+1. **API Data Extraction**  
+   Fetching raw data from the government API using pagination and storing it as CSV.
+
+2. **Data Warehouse (DWH) Layer & Cleaning**  
+   Loading raw data into PostgreSQL, optimizing data types, handling NULL values, and validating records.
+
+3. **Data Enrichment**  
+   Engineering new analytical features such as:
+   - Vehicle Age Category
+   - Fuel Classification
+   - Environmental Pollution Levels
+
+4. **Market Intelligence Dashboard**  
+   Generating visual insights using **Python and Plotly**.
+
+---
+
+# 💡 Architecture & Scalability
+
+To ensure robustness and ease of review, the project includes **two pipeline environments**.
+
+### 1️⃣ Full Local Environment (Production Scale)
+
+The core pipeline runs on a **local PostgreSQL database**.
+
+This setup processes the **entire dataset (~4.5 million records)** and demonstrates the architecture's ability to handle large-scale data workloads without the storage limitations of free cloud tiers.
+
+### 2️⃣ Cloud Demo Environment (Neon DB)
+
+Due to storage limitations of the free **Neon PostgreSQL cloud tier**, a parallel cloud demo pipeline was created.
+
+This version:
+
+- Extracts a **representative sample** of the dataset directly via API
+- Loads the data into **Neon Cloud PostgreSQL**
+- Allows reviewers to **run the notebooks instantly without local setup**
+
+This approach ensures **both scalability and ease of evaluation**.
+
+---
+
+# 📁 Repository Structure
 
 ```text
 /
 ├── notebooks/
-│   ├── Vehicle_Data_Pipeline_&_Insights.ipynb    # API extraction and full end-to-end pipeline
-│   └── Market_Intelligence_Full_Analysis.ipynb   # Visualization & dashboard generation (Local/Full DB)
+│   ├── Vehicle_Data_Pipeline_&_Insights.ipynb
+│   │     API extraction + end-to-end pipeline
+│   │
+│   └── Market_Intelligence_Full_Analysis.ipynb
+│         Visualization & dashboard generation (Full Dataset)
+│
 ├── sql/
-│   ├── dwh_schema.sql                            # DDL for schema and optimized data types
-│   ├── dwh_procedure.sql                         # Data cleaning and loading logic
-│   └── enrich_dwh.sql                            # Feature engineering and indexing
-├── charts/                                       # High-resolution PNG files (Full Dataset)
+│   ├── dwh_schema.sql
+│   │     Schema creation and optimized data types
+│   │
+│   ├── dwh_procedure.sql
+│   │     Data cleaning and loading logic
+│   │
+│   └── enrich_dwh.sql
+│         Feature engineering and indexing
+│
+├── charts/
 │   ├── chart_market_share.png
 │   ├── chart_fleet_age.png
 │   ├── chart_pollution_trend.png
 │   └── chart_fuel_evolution.png
+│
 ├── data/
-│   └── enrichment_validation.csv                 # Statistics and validation of enriched fields
+│   └── enrichment_validation.csv
+│         Validation statistics of enriched fields
+│
 └── README.md
 
 
