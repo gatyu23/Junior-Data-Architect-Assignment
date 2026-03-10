@@ -1,4 +1,4 @@
-# Surpass - Junior Data Architect Take-Home Assignment
+# Junior Data Architect Assignment
 
 This repository contains an End-to-End data engineering and analytics solution for the Surpass Junior Data Architect assignment. The project demonstrates the extraction, transformation, enrichment, and visualization of vehicle data from the Israeli Ministry of Transport (data.gov.il).
 
@@ -9,10 +9,12 @@ The pipeline processes real-world data and generates a Market Intelligence Dashb
 3. **Data Enrichment**: Engineering new features such as Vehicle Age Category, Fuel Classification, and Environmental Pollution Levels.
 4. **Market Intelligence Dashboard**: Generating visual business insights using Python (Plotly).
 
+   
 ### 💡 Architecture & Scalability
-* **Full Local DB**: The core pipeline is designed to handle the full dataset (~4.5 million records) using a local **PostgreSQL** database. 
-* **Cloud Demo (Neon)**: To facilitate easy testing and review, a cloud-based PostgreSQL demo (via Neon) is also supported, allowing the visualization notebooks to run out-of-the-box on a sample dataset.
+To ensure both robustness and ease of review, I have implemented two identical versions of the data pipeline:
 
+* **Full Local Environment (Production Scale)**: The core pipeline is configured to run on a local **PostgreSQL** database. This setup is designed to process the entire dataset of approximately 4.5 million records, demonstrating the architecture's ability to handle large-scale data without being restricted by the storage limitations of free cloud tiers.
+* **Cloud Demo Environment (Neon DB)**: Due to the storage constraints of the free Neon cloud database, I deployed a parallel, ready-to-run cloud version. This version extracts a representative sample of the data directly via the API and stores it in Neon. It is specifically designed to allow reviewers to easily execute the notebooks and evaluate the dashboard logic out-of-the-box, without needing to set up or configure a local database.
 ## 📁 Repository Structure
 
 ```text
