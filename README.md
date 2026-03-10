@@ -139,7 +139,7 @@ During the cleaning and enrichment phases, the following business logic was appl
   In order to convert it into a standard SQL `DATE` format, all vehicles were assigned the **first day of the reported month**.
 
   ---
-  ---
+ 
 
 ---
 
