@@ -141,14 +141,16 @@ During the cleaning and enrichment phases, the following business logic was appl
   ---
   ---
 
+---
+
 ## 📊 Dashboard Preview
 
 Below are key insights generated from the enriched vehicle dataset (~4.5M records).
 
 | Market Share | Fleet Age |
 |--------------|-----------|
-| ![](charts/Market Share Analysis.png) | ![](charts/Fleet Age Distribution.png) |
+| <img src="charts/Market Share Analysis.png" width="500"> | <img src="charts/Fleet Age Distribution.png" width="500"> |
 
 | Pollution Trend | Fuel Evolution |
 |-----------------|---------------|
-| ![](charts/Environmental Trend.png) | ![](charts/Fuel distribution by 5-year periods.png) |
+| <img src="charts/Environmental Trend.png" width="500"> | <img src="charts/Fuel distribution by 5-year periods.png" width="500"> |
