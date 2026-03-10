@@ -34,3 +34,30 @@ To ensure both robustness and ease of review, I have implemented two identical v
 ├── data/
 │   └── enrichment_validation.csv                 # Statistics and validation of enriched fields
 └── README.md
+
+
+## 🛠️ Prerequisites & Setup
+To run this project locally, ensure you have the following installed:
+* **Python 3.8+**
+* **PostgreSQL**
+* Python packages: `pandas`, `requests`, `sqlalchemy`, `plotly`, `psycopg2`
+
+### Environment Variables
+For security reasons, database credentials are not hardcoded. Please set the following environment variables (or update the connection strings locally in the notebooks):
+* `DB_HOST`
+* `DB_PORT`
+* `DB_NAME`
+* `DB_USER`
+* `DB_PASS`
+
+## ⚙️ How to Run
+1. **Cloud Demo (Fastest Way)**: Simply open and run all cells in `Vehicle_Data_Pipeline_&_Insights.ipynb`. It connects to the Neon cloud DB and displays the pipeline logic and dashboard immediately.
+2. **Local Database Setup (Full Data)**: To process the entire dataset locally, execute the SQL scripts in the `sql/` folder sequentially (`dwh_schema.sql` -> `dwh_procedure.sql` -> `enrich_dwh.sql`) in your PostgreSQL environment.
+3. **Generate Full Dashboard**: Run `Market_Intelligence_Full_Analysis.ipynb` to connect to your local database, analyze the ~4.5 million enriched records, and generate the final business insights.
+
+## 📌 Key Assumptions & Data Logic
+During the cleaning and enrichment phases, the following business logic was applied:
+* **Production Year Validation**: Filtered valid production years between `1900` and `2026`. Outliers and anomalies were treated as `NULL`.
+* **Missing Values Handling**: Empty strings (`""`) and textual `"null"` values from the raw API were converted to proper SQL `NULL` values.
+* **Vehicle Age Calculation**: Calculated relative to the assignment's baseline year (2026).
+* **Fuel Categorization**: Clustered various raw fuel descriptions into distinct macro-categories (e.g., Gasoline, Diesel, Hybrid, Electric) for cleaner visualization.
