@@ -5,7 +5,7 @@ The project demonstrates the **extraction, transformation, enrichment, and visua
 
 ---
 
-# 🚀 Project Overview
+# Project Overview
 
 The pipeline processes real-world transportation data and generates a **Market Intelligence Dashboard**.
 
