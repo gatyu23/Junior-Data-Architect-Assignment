@@ -139,19 +139,16 @@ During the cleaning and enrichment phases, the following business logic was appl
   In order to convert it into a standard SQL `DATE` format, all vehicles were assigned the **first day of the reported month**.
 
   ---
+  ---
 
-# 📊 Dashboard Preview
+## 📊 Dashboard Preview
 
 Below are key insights generated from the enriched vehicle dataset (~4.5M records).
 
-### Market Share by Manufacturer
-![Market Share](charts/chart_market_share.png)
+| Market Share | Fleet Age |
+|--------------|-----------|
+| ![](charts/Market Share Analysis.png) | ![](charts/Fleet Age Distribution.png) |
 
-### Fleet Age Distribution
-![Fleet Age](charts/chart_fleet_age.png)
-
-### Pollution Level Trend
-![Pollution Trend](charts/chart_pollution_trend.png)
-
-### Fuel Type Evolution
-![Fuel Evolution](charts/chart_fuel_evolution.png)
+| Pollution Trend | Fuel Evolution |
+|-----------------|---------------|
+| ![](charts/Environmental Trend.png) | ![](charts/Fuel distribution by 5-year periods.png) |
