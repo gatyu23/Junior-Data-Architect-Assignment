@@ -137,3 +137,21 @@ During the cleaning and enrichment phases, the following business logic was appl
 * **Road Registration Date Standardization**  
   The `moed_aliya_lakvish` field was provided in **month/year format** only.  
   In order to convert it into a standard SQL `DATE` format, all vehicles were assigned the **first day of the reported month**.
+
+  ---
+
+# 📊 Dashboard Preview
+
+Below are key insights generated from the enriched vehicle dataset (~4.5M records).
+
+### Market Share by Manufacturer
+![Market Share](charts/chart_market_share.png)
+
+### Fleet Age Distribution
+![Fleet Age](charts/chart_fleet_age.png)
+
+### Pollution Level Trend
+![Pollution Trend](charts/chart_pollution_trend.png)
+
+### Fuel Type Evolution
+![Fuel Evolution](charts/chart_fuel_evolution.png)
