@@ -100,6 +100,8 @@ For security reasons, database credentials are not hardcoded. Please set the fol
 * `DB_USER`
 * `DB_PASS`
 
+```text
+
 ## ⚙️ How to Run
 1. **Cloud Demo (Fastest Way)**: Simply open and run all cells in `Vehicle_Data_Pipeline_&_Insights.ipynb`. It connects to the Neon cloud DB and displays the pipeline logic and dashboard immediately.
 2. **Local Database Setup (Full Data)**: To process the entire dataset locally, execute the SQL scripts in the `sql/` folder sequentially (`dwh_schema.sql` -> `dwh_procedure.sql` -> `enrich_dwh.sql`) in your PostgreSQL environment.
