@@ -53,6 +53,8 @@ This approach ensures **both scalability and ease of evaluation**.
 ---
 
 # 📁 Repository Structure
+
+```text
 /
 ├── notebooks/
 │   ├── Vehicle_Data_Pipeline_&_Insights.ipynb
@@ -82,6 +84,7 @@ This approach ensures **both scalability and ease of evaluation**.
 │         Validation statistics of enriched fields
 │
 └── README.md
+```
 
 ---
 
