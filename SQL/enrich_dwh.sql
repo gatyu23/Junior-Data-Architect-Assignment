@@ -1,8 +1,4 @@
 
--- ================================================================
--- Part C: Data Enrichment Script
--- ================================================================
-
 ALTER TABLE dwh.vehicle
     ADD COLUMN vehicle_age INTEGER,
     ADD COLUMN age_category VARCHAR(20),
