@@ -144,6 +144,7 @@ During the cleaning and enrichment phases, the following business logic was appl
 ## 📊 Dashboard Preview
 
 Below are key insights generated from the enriched vehicle dataset (~4.5M records).
+sourced from the Israeli Ministry of Transport open dataset available on data.gov.il
 
 | Market Share | Fleet Age |
 |--------------|-----------|
